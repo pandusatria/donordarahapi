@@ -1,0 +1,19 @@
+{
+  "name": "donordarahapigithub",
+  "version": "1.0.0",
+  "description": "Donor Darah API with GIthub",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pandusatria/donordarahapigithub.git"
+  },
+  "author": "Pandu Satria",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pandusatria/donordarahapigithub/issues"
+  },
+  "homepage": "https://github.com/pandusatria/donordarahapigithub#readme"
+}

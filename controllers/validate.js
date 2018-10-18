@@ -4,7 +4,7 @@ const Response = require('../config/response');
 const ObjectID = require('mongodb').ObjectID;
 
 const ValidateController = {
-    clientCheckName : (req, res, next) => {
+    ClientCheckNameHandler : (req, res, next) => {
         let nama = req.params.name;
         global.dbo.collection('m_client').findOne({status : false, nama_client : nama}, (err, data) => {
             if(data)
@@ -25,7 +25,7 @@ const ValidateController = {
             }
         });
     },
-    roleCheckName : (req, res, next) => {
+    RoleCheckNameHandler : (req, res, next) => {
         let name = req.params.name;
         global.dbo.collection('m_role').findOne({status : false, role : name}, (err, data) => {
             if(data)

@@ -8,6 +8,7 @@ var role = require('../controllers/m_role');
 var pendonor = require('../controllers/t_pendonor');
 var middleware = require('../middleware/checktoken');
 var validate = require("../controllers/validate");
+var menu = require("../controllers/m_menu");
 
 module.exports = exports = function(server){
 
@@ -52,8 +53,11 @@ module.exports = exports = function(server){
     server.del('/api/pendonor/:id', middleware.checkToken, pendonor.DeleteHandler);
 
     // Validate Route
-    server.get('/api/validate/checkclient/:name', middleware.checkToken, validate.clientCheckName);
-    server.get('/api/validate/checkrole/:name', middleware.checkToken, validate.roleCheckName);
+    server.get('/api/validate/checkclient/:name', middleware.checkToken, validate.ClientCheckNameHandler);
+    server.get('/api/validate/checkrole/:name', middleware.checkToken, validate.RoleCheckNameHandler);
+
+    // Menu Route
+    server.get('/api/menu/getloginmenu/', middleware.checkToken, menu.GetMenuLoginHandler);
 
     // error handler
     server.use(function(err, req, res, next) {

@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/pandusatria/donordarahapigithub/issues"
   },
-  "homepage": "https://github.com/pandusatria/donordarahapigithub#readme"
+  "homepage": "https://github.com/pandusatria/donordarahapigithub#readme",
   "dependencies": {
     "app-root-path": "^2.1.0",
     "bcryptjs": "^2.4.3",

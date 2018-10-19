@@ -55,11 +55,11 @@ const MenuController = {
                 return next(new Error());
             }
 
-            let modelCollection = data.map((entity) => {
+            /*let modelCollection = data.map((entity) => {
                 return new menuModel(entity);
-            });
+            });*/
 
-            Response.send(res, 200, modelCollection);
+            Response.send(res, 200, data);
         });
     }
 };

@@ -16,7 +16,8 @@ module.exports = exports = function(server){
     var corsMiddleware = require('restify-cors-middleware');
     var cors = corsMiddleware({
         origins : ['*'],
-        allowHeaders : ['authorization']
+        allowHeaders : ['authorization'],
+        credentials: true
     });
 
     server.pre(cors.preflight);

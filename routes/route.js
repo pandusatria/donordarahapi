@@ -27,7 +27,7 @@ module.exports = exports = function(server){
     server.get('/api/client/:id', middleware.checkToken, client.GetDetailByIDHandler);
     server.post('/api/client/', middleware.checkToken, client.CreateHandler);
     server.put('/api/client/:id', middleware.checkToken, client.UpdateHandler);
-    server.post('/api/client/delete/:id', middleware.checkToken, client.DeleteHandler);
+    server.del('/api/client/:id', middleware.checkToken, client.DeleteHandler);
 
     // Role Route
     server.get('/api/role/', middleware.checkTokenAndRoleAdmin, role.GetAllHandler);

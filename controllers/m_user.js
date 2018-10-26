@@ -38,7 +38,7 @@ const UserController = {
 
                                 // Generate JWT Token
                                 let token = jwt.sign(data, secret.secretkey,{
-                                    expiresIn: 3600
+                                    expiresIn: 86400
                                 });
 
                                 delete data.password;

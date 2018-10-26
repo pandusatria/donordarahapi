@@ -46,7 +46,7 @@ const PendonorController = {
         data.alamat         =   reqdata.alamat;
         data.jenis_kelamin  =   reqdata.jenis_kelamin;
         data.no_telp        =   reqdata.no_telp;
-        data.tanggal_donor  =   new Date(reqdata.tanggal_donor);
+        data.tanggal_donor  =   now;
         data.status_donor   =   "Baru";
         data.id_goldarah    =   reqdata.id_goldarah;
         data.created_date = now;
@@ -54,6 +54,8 @@ const PendonorController = {
         data.updated_date = null;
         data.updated_by = null;
         data.status = false;
+
+        console.log(data);
 
         var model = new pendonorModel(data);
 
